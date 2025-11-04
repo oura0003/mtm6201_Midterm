@@ -394,3 +394,148 @@ nav {
   }
   .feature-card__title{ font-size: 1.1rem; }
 }
+
+/* Blog Section 3 */
+
+.blogs{
+  background: #FAFDF2;
+  padding: 40px 20px 56px;
+  color: var(--ink-dark);
+}
+
+.blogs__intro{
+  max-width: 860px;
+  margin: 0 auto 18px;
+  text-align: center;
+}
+.blogs__title{
+  margin: 0 0 6px;
+  font-weight: 800;
+  font-size: clamp(22px, 5.5vw, 32px);
+  color: var(--ink-dark);
+}
+.blogs__subtitle{
+  margin: 0 auto;
+  max-width: 70ch;
+  color: var(--ink-muted);
+  line-height: 1.6;
+  font-size: .98rem;
+}
+
+/* grid */
+.blogs__grid{
+  margin: 18px auto 0;
+  max-width: 1120px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* card */
+.blog-card{
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 1px 0 rgba(0,0,0,.03);
+}
+
+.blog-card__media{
+  display: block;
+  padding: 12px;
+}
+.blog-card__media img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.blog-card__content{
+  padding: 14px 16px 12px;
+}
+.blog-card__category{
+  display: inline-block;
+  font-size: .88rem;
+  color: #2b3b33;
+  opacity: .9;
+  margin-bottom: 4px;
+}
+.blog-card__title{
+  margin: 0 0 6px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--ink-dark);
+}
+.blog-card__title a{ color: inherit; }
+
+.blog-card__excerpt{
+  margin: 0 0 12px;
+  color: var(--ink-muted);
+  line-height: 1.6;
+}
+
+/* meta row */
+.blog-card__meta{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0 6px;
+  border-top: 1px solid rgba(18,45,33,0.08);
+}
+
+.author{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.author img{
+  width: 34px; height: 34px; border-radius: 50%;
+  object-fit: cover;
+}
+.author__name{
+  display: block;
+  font-weight: 700;
+  color: var(--ink-dark);
+  line-height: 1.1;
+}
+.author__info{
+  display: block;
+  color: var(--ink-muted);
+  font-size: .9rem;
+}
+
+/* actions (image icons) */
+.blog-card__actions{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.icon-btn{
+  appearance: none; border: 1px solid rgba(18,45,33,0.12);
+  background: #fff; padding: 6px; border-radius: 10px;
+  cursor: pointer;
+}
+.icon-btn img{
+  display: block; width: 18px; height: 18px; object-fit: contain;
+}
+
+/* ============ BREAKPOINTS ============ */
+
+/* tablet */
+@media (min-width: 768px){
+  .blogs{ padding: 56px 28px 72px; }
+  .blog-card__title{ font-size: 1.25rem; }
+  .blog-card__content{ padding: 16px 18px 14px; }
+}
+
+/* desktop: 2 columns, balanced spacing like mock */
+@media (min-width: 1024px){
+  .blogs{ padding: 64px 80px 88px; }
+  .blogs__grid{
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 24px;
+  }
+}
