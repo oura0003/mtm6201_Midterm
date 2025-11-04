@@ -180,7 +180,7 @@ nav {
   row-gap: 18px;
 }
 
-/* media panel with dotted grid + rounded corner like the mock */
+
 .hero_media { grid-area: media; display: flex; justify-content: center; }
 .hero_panel {
   width: min(500px, 92vw);
@@ -198,7 +198,7 @@ nav {
 }
 
 
-/* badge lives under the image on mobile */
+
 .hero__social {
   grid-area: social;
   display: inline-flex;
@@ -234,7 +234,7 @@ nav {
   margin: 0 0 18px;
 }
 
-/* actions – two buttons side-by-side on mobile */
+
 .hero__actions {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -245,13 +245,12 @@ nav {
 .btn--primary { background: var(--accent); color: #0b120e; }
 .btn--ghost   { background: transparent; border: 1px solid rgba(0,0,0,.12); color: #1b2b23; }
 
-/* keep buttons’ hover consistent with your theme */
+
 .btn--primary:hover { filter: brightness(.95); }
 .btn--ghost:hover   { border-color: rgba(0,0,0,.2); }
 
-/* ====== BREAKPOINTS ====== */
 
-/* Tablet: widen content, keep stack */
+
 @media (min-width: 768px) {
   .hero {
     padding: 48px 28px 60px;
@@ -262,7 +261,7 @@ nav {
   .hero__actions { max-width: 520px; margin: 0 auto; }
 }
 
-/* Desktop: image left, text right; badge moves under buttons in text column */
+
 @media (min-width: 1024px) {
   .hero {
     padding: 64px 80px;
@@ -284,12 +283,12 @@ nav {
     max-width: 620px;
   }
 
-  /* move the badge after the actions using order (same DOM element) */
+ 
   .hero__social {
-    grid-area: content;         /* place it in the right column */
+    grid-area: content;         
     justify-self: start;
     margin-top: 16px;
-    order: 3;                   /* appears after actions */
+    order: 3;                   
     background: #fff;
   }
   .hero__actions { justify-content: start; max-width: none; }
@@ -298,7 +297,7 @@ nav {
 /* Section 2 */
 
 .features{
-  background: #FAFDF2;         /* matches hero section backdrop */
+  background: #FAFDF2;         
   padding: 40px 20px 56px;
   color: var(--ink-dark);
 }
@@ -345,11 +344,11 @@ nav {
   box-shadow: 0 1px 0 rgba(0,0,0,0.03);
 }
 
-/* Icon — image version */
+
 .feature-card__icon{
   width: 44px; height: 44px;
   border-radius: 10px;
-  overflow: hidden;           /* keeps rounded corners on the image */
+  overflow: hidden;           
   flex-shrink: 0;
 }
 .feature-card__icon img{
@@ -367,25 +366,22 @@ nav {
   color: var(--ink-dark);
 }
 .feature-card__text{
-  grid-column: 2 / -1;        /* text aligns under title (not under icon) */
+  grid-column: 2 / -1;        
   margin: 0;
   color: var(--ink-muted);
   line-height: 1.65;
   font-size: .97rem;
 }
 
-/* =========================
-   BREAKPOINTS
-   ========================= */
 
-/* Tablet */
+
 @media (min-width: 768px){
   .features{ padding: 56px 28px 72px; }
   .features__grid{ gap: 16px; }
   .feature-card{ padding: 18px 20px; }
 }
 
-/* Desktop (2 columns x 3 rows like the mock) */
+/* Desktop */
 @media (min-width: 1024px){
   .features{ padding: 64px 80px 88px; }
   .features__grid{
@@ -476,7 +472,7 @@ nav {
   line-height: 1.6;
 }
 
-/* meta row */
+
 .blog-card__meta{
   display: flex;
   justify-content: space-between;
@@ -507,7 +503,7 @@ nav {
   font-size: .9rem;
 }
 
-/* actions (image icons) */
+
 .blog-card__actions{
   display: inline-flex;
   align-items: center;
@@ -522,7 +518,7 @@ nav {
   display: block; width: 18px; height: 18px; object-fit: contain;
 }
 
-/* ============ BREAKPOINTS ============ */
+
 
 /* tablet */
 @media (min-width: 768px){
@@ -531,7 +527,7 @@ nav {
   .blog-card__content{ padding: 16px 18px 14px; }
 }
 
-/* desktop: 2 columns, balanced spacing like mock */
+/* desktop */
 @media (min-width: 1024px){
   .blogs{ padding: 64px 80px 88px; }
   .blogs__grid{
@@ -567,17 +563,17 @@ nav {
   font-size: .98rem;
 }
 
-/* Track: swipeable carousel on mobile */
+
 .t-track{
   display: flex;
   gap: 14px;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
-  padding-block: 4px;                         /* tiny breathing room */
+  padding-block: 4px;                         
   scroll-behavior: smooth;
 }
-.t-track::-webkit-scrollbar{ display: none; } /* clean mobile look */
+.t-track::-webkit-scrollbar{ display: none; } 
 
 /* Card */
 .t-card{
@@ -602,7 +598,7 @@ nav {
   margin: 0;
 }
 
-/* Author strip */
+
 .t-author{
   display: flex;
   align-items: center;
@@ -642,7 +638,7 @@ nav {
 }
 .t-arrow img{ width: 16px; height: 16px; display: block; }
 
-/* dots (CSS only, no SVG) */
+
 .t-dots{
   display: inline-flex; gap: 8px; align-items: center;
   background: var(--t-strip);
@@ -658,13 +654,13 @@ nav {
 
 
 
-/* Tablet tweaks */
+
 @media (min-width: 768px){
   .testimonials{ padding: 56px 28px 72px; }
   .t-track{ gap: 16px; }
 }
 
-/* Desktop: grid of 3 cards; hide controls */
+/* Desktop */
 @media (min-width: 1024px){
   .testimonials{ padding: 64px 80px 88px; }
 
@@ -681,4 +677,239 @@ nav {
   }
 
   .t-controls{ display: none; }
+}
+
+/* Pricing Section */
+.pricing{
+  background: #FAFDF2;
+  color: var(--ink-dark);
+  padding: 40px 20px 56px;
+}
+
+.pricing__intro{
+  max-width: 860px; margin: 0 auto 18px; text-align: center;
+}
+.pricing__title{
+  margin: 0 0 6px;
+  font-weight: 800;
+  font-size: clamp(22px, 5.5vw, 32px);
+}
+.pricing__subtitle{
+  margin: 0 auto; max-width: 70ch;
+  color: var(--ink-muted); line-height: 1.6; font-size: .98rem;
+}
+
+
+.billing{ display: grid; place-items: center; gap: 8px; margin: 10px 0 18px; }
+.billing-toggle{
+  position: relative;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 6px; align-items: center;
+  background: #f6f7f2;
+  border: 1px solid rgba(18,45,33,.12);
+  border-radius: 12px;
+  padding: 6px;
+  width: 220px;
+}
+.billing-toggle input{ display: none; }
+.billing-toggle label{
+  z-index: 1;
+  text-align: center; padding: 8px 0; cursor: pointer;
+  font-weight: 600; color: #2b3b33;
+  border-radius: 8px;
+}
+.billing-glider{
+  position: absolute; inset: 6px;
+  width: calc(50% - 6px); height: calc(100% - 12px);
+  background: var(--bg-nav);         
+  border-radius: 8px;
+  transition: transform .2s ease;
+}
+#bill-monthly:checked ~ .billing-glider{ transform: translateX(0); }
+#bill-yearly:checked  ~ .billing-glider{ transform: translateX(100%); }
+#bill-monthly:checked + label,
+#bill-yearly:checked + label{
+  color: var(--text);                
+}
+.billing-note{
+  margin: 0; font-size: .92rem; color: var(--ink-muted);
+}
+
+/* Cards */
+.pricing__grid{
+  margin: 6px auto 0;
+  max-width: 1120px;
+  display: grid; grid-template-columns: 1fr;
+  gap: 14px;
+}
+.price-card{
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: 16px 16px 18px;
+  box-shadow: 0 1px 0 rgba(0,0,0,.03);
+  display: grid; align-content: start; gap: 10px;
+}
+.price-card__title{ margin: 0; font-weight: 700; font-size: 1.05rem; }
+.price-card__sub{ margin: -2px 0 4px; color: var(--ink-muted); font-size: .92rem; }
+
+.price{
+  margin: 2px 0 6px;
+  display: flex; align-items: baseline; gap: 6px;
+}
+.price__amount{ font-size: 2rem; font-weight: 800; color: var(--ink-dark); }
+.price__per{ color: var(--ink-muted); }
+
+.price-card__desc{
+  color: var(--ink-muted); line-height: 1.6; margin: 0 0 8px;
+}
+
+/* Buttons */
+.btn{ display: inline-block; padding: 12px 14px; border-radius: var(--radius); font-weight: 700; text-align: center; }
+.btn--block{ width: 100%; }
+.btn--primary{ background: var(--accent); color: #0b120e; }
+.btn--primary:hover{ filter: brightness(.95); }
+
+
+@media (min-width: 768px){
+  .pricing{ padding: 56px 28px 72px; }
+  .price__amount{ font-size: 2.2rem; }
+  .price-card{ padding: 18px 20px 20px; }
+}
+
+@media (min-width: 1024px){
+  .pricing{ padding: 64px 80px 88px; }
+  .pricing__grid{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 24px;
+  }
+}
+
+/* Footer Part */
+.site-footer{
+  background: var(--bg-nav);
+  color: var(--text);
+  padding: 20px 20px 28px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* top row */
+.footer__top{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+/* brand */
+.footer__brand{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer__brand img{
+  width: 32px; height: 32px; border-radius: 8px; object-fit: cover;
+}
+.footer__brand span{ font-weight: 700; }
+
+/* nav links */
+.footer__nav{
+  display: grid;
+  grid-auto-rows: max-content;
+  gap: 6px;
+}
+.footer__nav a{
+  color: var(--text);
+  text-decoration: none;
+  opacity: .95;
+}
+.footer__nav a:hover{ color: var(--accent); }
+
+/* go to top */
+.footer__to-top{
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--footer-border);
+  background: #133225;
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: 999px;
+}
+.footer__to-top img{ width: 16px; height: 16px; display: block; }
+
+/* info bar */
+.footer__bar{
+  margin-top: 12px;
+  background: #133325;                  
+  border: 1px solid var(--footer-border);
+  border-radius: 10px;
+  padding: 12px;
+  display: grid;
+  gap: 10px;
+}
+.footer__pill{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--footer-border);
+  border-radius: 8px;
+  background: #0f2b1e;                   
+}
+.footer__pill img{ width: 16px; height: 16px; object-fit: contain; }
+.footer__copy{
+  text-align: center;
+  color: var(--text-muted);
+  font-size: .92rem;
+  padding-top: 6px;
+}
+
+
+
+/* Tablet */
+@media (min-width: 768px){
+  .site-footer{ padding: 24px 28px 36px; }
+
+  .footer__nav{
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 14px;
+  }
+
+  .footer__bar{
+    grid-template-columns: 1fr;
+    padding: 14px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px){
+  .site-footer{ padding: 28px 80px 44px; }
+
+  .footer__top{
+    grid-template-columns: 1fr auto auto; 
+    gap: 18px;
+  }
+  .footer__nav{
+    justify-self: center;
+    gap: 20px;
+  }
+
+  .footer__bar{
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: auto auto auto 1fr; 
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+  }
+  .footer__pill{
+    min-width: 260px;
+  }
+  .footer__copy{
+    text-align: right;
+    padding: 0;
+  }
 }
