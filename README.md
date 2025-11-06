@@ -1,6 +1,5 @@
 # mtm6201_Midterm
 I chose the Three pages  (Home, Team, Contact) based on provided mockups.
-## Author 
-Praha
+**UX Design:** Original design by PRAHA.
+- **Implementation:** Realized by Lilia Ourabah.
 
-FAFDF2
